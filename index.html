@@ -18,7 +18,9 @@
     <aside class="sidebar">
         <h2>Your Lists</h2>
 
-        <ul id="list-sidebar"></ul>
+        <ul id="list-sidebar">
+            
+        </ul>
 
         <form id="new-list-form">
             <input type="text" id="new-list-input" placeholder="New list name..." required>
@@ -26,18 +28,25 @@
         </form>
     </aside>
 
-        <section class="task-container">
-            <form id="task-form">
-                <input type="text" placeholder="New Task">
-                <button type="submit" id="add-task-button">+</button>
-            </form>
-        </section>
-        
-        <section id="task-grid"></section>
-        <div class= list-grid>
+    <section id="list-container">
+        <div class="task-header">
+        <h2 id="current-list-title">Select a list</h2>
+      </div>
 
-        </div>
+    </section>
+
+    <section class="task-container">
+        <form id="task-form">
+            <input type="text" placeholder="New Task">
+            <button type="submit" id="add-task-button">+</button>
+        </form>
+    </section>
+    
+    <section id="task-grid"></section>
+    <div class= list-grid> </div>
+
     </main>
+    
     <footer>
           <div class="Contact-information">
             <aside>
