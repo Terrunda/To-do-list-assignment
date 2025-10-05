@@ -10,17 +10,34 @@
 <body>
     <header>
         <h1> To do list</h1>
-        <p>Brief description</p>
+
+        <p>Stay organized — manage your daily tasks efficiently</p>
     </header>
 
-    <section class="List-section">
-    </section>
+    <main>
+    <aside class="sidebar">
+        <h2>Your Lists</h2>
 
+        <ul id="list-sidebar"></ul>
 
-    <section id="Create-List">
-       <!--Circular button-->
-    </section>
+        <form id="new-list-form">
+            <input type="text" id="new-list-input" placeholder="New list name..." required>
+            <button type="submit" id="add-list-btn">+</button>
+        </form>
+    </aside>
 
+        <section class="task-container">
+            <form id="task-form">
+                <input type="text" placeholder="New Task">
+                <button type="submit" id="add-task-button">+</button>
+            </form>
+        </section>
+        
+        <section id="task-grid"></section>
+        <div class= list-grid>
+
+        </div>
+    </main>
     <footer>
           <div class="Contact-information">
             <aside>

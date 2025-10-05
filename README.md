@@ -12,8 +12,6 @@ A simple and interactive **Task List (To-Do List)** web app that allows users to
     - Choice to repeat
     -   An optinal note for each task.
 
-
-
 ## Other ideas.
 - Custom priority levels for each task.
 - Due dates with a time.
