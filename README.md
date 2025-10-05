@@ -4,7 +4,7 @@ A simple and interactive **Task List (To-Do List)** web app that allows users to
 ## Tests to be made/ Planned functionality:
 - ### Creation of Lists with:
     - List names
-    - A method of differentiating a list through differenyt colours/icons.
+    - A method of differentiating a list through different colours/icons.
 
 - ### Creation of tasks with:
     -  Reminders
