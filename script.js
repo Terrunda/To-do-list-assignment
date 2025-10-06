@@ -52,7 +52,7 @@ const newListInput = document.getElementById("new-list-input");
 const listContainer = document.getElementById("list-container");
 const currentlistTitle = document.getElementById("current-list-title");
 const taskForm = document.getElementById("task-form");
-const taskInput = document.getElementById("task-input");
+const taskInput = document.querySelector("#task-form input[type='text']");
 const taskGrid = document.getElementById("task-grid");
 
 let allLists = [];
@@ -78,6 +78,21 @@ function selectList(listName) {
   displayCurrentList();
   displayTasks();
 }
+
+function displayLists() {
+  listSidebar.innerHTML = "";
+  allLists.forEach(list => {
+    const li = document.createElement("li");
+    li.textContent = list.ListName;
+    li.addEventListener("click", () => selectList(list.ListName));
+    listSidebar.appendChild(li);
+  });
+}
+
+
+
+
+
 
 
 newListForm.addEventListener("submit", e => {
