@@ -89,10 +89,24 @@ function displayLists() {
   });
 }
 
+function displayCurrentList() {
+  currentListTitle.textContent = currentList ? currentList.ListName : "Select a list";
+}
 
-
-
-
+function displayTasks() {
+  taskGrid.innerHTML = "";
+  if (!currentList) return;
+  currentList.TasksInList.forEach(task => {
+    const div = document.createElement("div");
+    div.className = "task-item";
+    div.textContent = task.TaskName;
+    div.addEventListener("click", () => {
+      task.ToggleComplete();
+      div.classList.toggle("completed", task.TaskComplete);
+    });
+    taskGrid.appendChild(div);
+  });
+}
 
 
 newListForm.addEventListener("submit", e => {
