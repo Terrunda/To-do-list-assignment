@@ -1,16 +1,17 @@
-function TaskConstructor() {
+function TaskConstructor(TaskName, DueDate, TaskNote) {
     this.TaskID = Date.now();
     this.TaskName = TaskName;
-    this.DueDate =DueDate;
+    this.DueDate = DueDate;
     this.TaskComplete = false;
     this.TaskNote = TaskNote;
     this.EarlyReminder = null;
+}
 
 TaskConstructor.prototype.ToggleComplete = function() {
     this.TaskComplete = true;
 };
 
-TaskConstructor.apply.prototype.AddReminder = function(remainderTime) {
+TaskConstructor.prototype.AddReminder = function(remainderTime) {
     this.EarlyReminder = reminderTime;
 };
 
@@ -18,12 +19,12 @@ TaskConstructor.prototype.UpdateNote = function (newNote) {
   this.TaskNote = newNote;
 };
 
-} 
 
 
-function ListConstructor() {
+function ListConstructor(ListName) {
     this.ListName = ListName;
     this.TasksInList = [];
+}
 
 ListConstructor.prototype.FindTask = function (taskName) {
   return this.TasksInList.find(task => task.TaskName === taskName);
@@ -41,8 +42,6 @@ ListConstructor.prototype.addTask = function(taskInstance) {
     this.TasksInList.push(taskInstance)
 };
 
-
-}
 
 
 const listSidebar = document.getElementById("list-sidebar");
@@ -109,7 +108,7 @@ function displayTasks() {
 }
 
 
-newListForm.addEventListener("submit", e => {
+newlistForm.addEventListener("submit", e => {
   e.preventDefault();
   const name = newListInput.value.trim();
   if (!name) return;
