@@ -44,10 +44,26 @@ ListConstructor.prototype.addTask = function(taskInstance) {
 
 }
 
-const sidebar = document.getElementById("list-sidebar");
-const listForm = document.getElementById("new-list-form");
+
+const listSidebar = document.getElementById("list-sidebar");
+const newlistForm = document.getElementById("new-list-form");
+const newListInput = document.getElementById("new-list-input");
 
 const listContainer = document.getElementById("list-container");
-const listTitle = document.getElementById("current-list-title");
+const currentlistTitle = document.getElementById("current-list-title");
 const taskForm = document.getElementById("task-form");
+const taskInput = document.getElementById("task-input");
 const taskGrid = document.getElementById("task-grid");
+
+function selectList(ListName) {
+
+}
+
+function addList(name) {
+
+}
+
+function addTask(taskName) {
+
+}
+
