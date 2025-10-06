@@ -3,14 +3,14 @@ A simple and interactive **Task List (To-Do List)** web app that allows users to
 
 ## Tests to be made/ Planned functionality:
 - ### Creation of Lists with:
-    - List names
-    - A method of differentiating a list through different colours/icons.
+    - List names ✅
+    - A method of differentiating a list through different colours/icons. ✅
 
 - ### Creation of tasks with:
-    -  Reminders
-    - Due Dates
-    - Choice to repeat
-    -  An optinal note for each task.
+    -  Reminders ❌
+    - Due Dates ❌
+    - Choice to repeat ❌
+    -  An optinal note for each task. ❌
 
 
 ## Languages used:
