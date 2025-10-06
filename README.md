@@ -18,7 +18,6 @@ A simple and interactive **Task List (To-Do List)** web app that allows users to
 - CSS for styling the page.
 - Javascript for list and task functionality.
 
-Disclaimer: Aside from creating objects and constructors, I used AI to create an algorithm for handling tasks and lists.
 
 ## Other ideas.
 - Custom priority levels for each task.
