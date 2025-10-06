@@ -55,15 +55,43 @@ const taskForm = document.getElementById("task-form");
 const taskInput = document.getElementById("task-input");
 const taskGrid = document.getElementById("task-grid");
 
-function selectList(ListName) {
-
-}
+let allLists = [];
+let currentList = null;
 
 function addList(name) {
-
+  const newList = new ListConstructor(name);
+  allLists.push(newList);
+  currentList = newList;
+  displayLists();
+  displayCurrentList();
 }
 
 function addTask(taskName) {
-
+  if (!currentList) return alert("Please select a list first!");
+  const newTask = new TaskConstructor(taskName);
+  currentList.addTask(newTask);
+  displayTasks();
 }
 
+function selectList(listName) {
+  currentList = allLists.find(list => list.ListName === listName);
+  displayCurrentList();
+  displayTasks();
+}
+
+
+newListForm.addEventListener("submit", e => {
+  e.preventDefault();
+  const name = newListInput.value.trim();
+  if (!name) return;
+  addList(name);
+  newListInput.value = "";
+});
+
+taskForm.addEventListener("submit", e => {
+  e.preventDefault();
+  const taskName = taskInput.value.trim();
+  if (!taskName) return;
+  addTask(taskName);
+  taskInput.value = "";
+});
