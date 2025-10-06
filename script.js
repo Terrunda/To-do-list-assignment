@@ -89,7 +89,7 @@ function displayLists() {
 }
 
 function displayCurrentList() {
-  currentListTitle.textContent = currentList ? currentList.ListName : "Select a list";
+  currentlistTitle.textContent = currentList ? currentList.ListName : "Select a list";
 }
 
 function displayTasks() {
